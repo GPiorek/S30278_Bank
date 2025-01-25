@@ -9,15 +9,25 @@ public class ClientServiceTest {
     ClientService clientService = new ClientService();
 
     @Test
-    void shouldTakeOutMoneyAfterTransfer(){
+    void shouldTakeOutMoneyAfterTransfer() {
         //GIVEN
         Client client = new Client(2, 500);
         clientService.clients.add(client);
         //WHEN
-        clientService.transferMoney(2,200);
+        clientService.transferMoney(2, 200);
         //THEN
-        assertTrue(client.getSaldo()==300);
+        assertTrue(client.getSaldo() == 300);
+    }
+
+
+    @Test
+    void shouldAddDeposite(){
+        //given
+        Client client = new Client(2, 500);
+        clientService.clients.add(client);
+        //when
+        clientService.addDeposit(2,300);
+        //then
+        assertTrue(client.getSaldo() == 800);
     }
 }
-
-
