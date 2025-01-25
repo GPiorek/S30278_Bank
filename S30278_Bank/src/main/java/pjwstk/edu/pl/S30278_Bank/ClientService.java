@@ -45,10 +45,15 @@ public class ClientService {
     void transferMoney(int id, int amount) {
         for(Client client : clients){
             if(client.getId() == id){
-                    System.out.println("Old saldo from client who transfer money = " + client.getSaldo());
+                if(client.getSaldo() >= amount) {
+                    System.out.println("Old saldo from client id: " + id + " who transfer money = " + client.getSaldo());
                     client.setSaldo(client.getSaldo() - amount);
-                    System.out.println("New saldo from client who transfer money = " + client.getSaldo());
+                    System.out.println("New saldo from client id: " + id + " who transfer money = " + client.getSaldo());
                     break;
+                }else {
+                    System.out.println("You dont have enough amount to make this transfer. Transaction DECLINED");
+                    break;
+                }
             }
             else{
                 System.out.println("Client is not registered");
