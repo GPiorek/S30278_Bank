@@ -13,6 +13,7 @@ public class ClientService {
         for (Client client : clients) {}
         Client client = new Client(id, saldo);
         clients.add(client);
+        System.out.println("Client with ID " + id + " has been registered. His account ammount = " + saldo);
     }
 
     void printClient(int id){

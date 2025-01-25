@@ -18,7 +18,7 @@ public class S30278BankApplication {
 	public static void run(){
 		clientService.registerClient(20, 300);
 		clientService.registerClient(30, 400);
-		System.out.println(clientService.clients);
+		System.out.println("List of clients " + clientService.clients);
 		clientService.printClient(20);
 		clientService.addDeposit(20,300);
 		clientService.transferMoney(20,10);
