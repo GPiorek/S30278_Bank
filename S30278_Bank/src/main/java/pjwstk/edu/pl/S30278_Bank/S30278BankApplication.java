@@ -21,7 +21,7 @@ public class S30278BankApplication {
 		System.out.println(clientService.clients);
 		clientService.printClient(20);
 		clientService.addDeposit(20,300);
-		clientService.transferMoney(10,10);
+		clientService.transferMoney(20,10);
 	}
 
 	public static void main(String[] args) {

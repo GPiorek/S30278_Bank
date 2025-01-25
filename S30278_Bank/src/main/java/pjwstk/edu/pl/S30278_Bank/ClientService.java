@@ -10,6 +10,7 @@ public class ClientService {
     List<Client> clients = new ArrayList<>();
 
     void registerClient(int id, long saldo) {
+        for (Client client : clients) {}
         Client client = new Client(id, saldo);
         clients.add(client);
     }
@@ -18,6 +19,7 @@ public class ClientService {
         for(Client client : clients){
             if(client.getId() == id){
                 System.out.println(client);
+                break;
             }
             else{
                 System.out.println("Client is not registered");
@@ -31,6 +33,7 @@ public class ClientService {
                 System.out.println("Old saldo before deposit= " + client.getSaldo());
                 client.setSaldo(client.getSaldo() + amount);
                 System.out.println("New saldo after deposit = " + client.getSaldo());
+                break;
             }
             else{
                 System.out.println("Client is not registered");
@@ -44,8 +47,9 @@ public class ClientService {
                     System.out.println("Old saldo from client who transfer money = " + client.getSaldo());
                     client.setSaldo(client.getSaldo() - amount);
                     System.out.println("New saldo from client who transfer money = " + client.getSaldo());
+                    break;
             }
-            if(client.getId() != id){
+            else{
                 System.out.println("Client is not registered");
             }
 
