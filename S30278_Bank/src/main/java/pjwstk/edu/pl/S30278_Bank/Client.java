@@ -9,6 +9,7 @@ public class Client {
         this.id = id;
         this.saldo = saldo;
     }
+
     private int id;
     private long saldo;
 

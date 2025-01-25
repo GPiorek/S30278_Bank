@@ -21,12 +21,12 @@ public class ClientServiceTest {
 
 
     @Test
-    void shouldAddDeposite(){
+    void shouldAddDeposite() {
         //given
         Client client = new Client(2, 500);
         clientService.clients.add(client);
         //when
-        clientService.addDeposit(2,300);
+        clientService.addDeposit(2, 300);
         //then
         assertTrue(client.getSaldo() == 800);
     }
