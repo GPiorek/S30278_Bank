@@ -1,16 +1,16 @@
 package pjwstk.edu.pl.S30278_Bank;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 
 
 public class Client {
-    private int id;
-    private long saldo;
-
     public Client(int id, long saldo) {
         this.id = id;
         this.saldo = saldo;
     }
+    private int id;
+    private long saldo;
 
     public int getId() {
         return id;

@@ -9,6 +9,7 @@ import java.util.List;
 public class ClientService {
     List<Client> clients = new ArrayList<>();
 
+
     void registerClient(int id, long saldo) {
         for (Client client : clients) {}
         Client client = new Client(id, saldo);
